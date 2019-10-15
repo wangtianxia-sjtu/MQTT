@@ -30,7 +30,7 @@
 #include <float.h>
 #include <limits.h>
 #include <ctype.h>
-#include "../mqtt/cJSON.h"
+#include "mqtt/cJSON.h"
 
 static const char *ep;
 

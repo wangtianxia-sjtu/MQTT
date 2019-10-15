@@ -417,7 +417,7 @@ static int MqttSample_CmdPing(struct MqttSampleContext *ctx)
 
 
 static int MqttSample_CmdPublishFullJson(struct MqttSampleContext *ctx,int  qos){
-    const char *str = "{\"datastreams\":[{ \"id\":\"temperature\", \"datapoints\":[{\"at\":\"2016-12-22 22:22:22\",\"value\": 36.5}]}]}";
+    const char *str = "{\"datastreams\":[{ \"id\":\"temperature\", \"datapoints\":[{\"value\": 36.5}]}]}";
     uint32_t size = strlen(str);
     int retain = 0;
     int own = 1;
@@ -614,7 +614,7 @@ static int MqttSample_CmdPushDp(struct MqttSampleContext *ctx)
     size_t topics_len = 0;
     int i=0;
 
-/*È¥µô×îºó»Ø³µ¼ü
+/*È¥ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½
  */
     for(i=strlen(buf); i>0; --i){
         if(buf[i-1] == 0x0a)
@@ -707,7 +707,7 @@ static int MqttSample_CmdSubscribe(struct MqttSampleContext *ctx)
     int i = 0;
 
     
-/*È¥µô×îºó»Ø³µ¼ü
+/*È¥ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½
  */
     for(i=strlen(buf); i>0; --i){
         if(buf[i-1] == 0x0a)
@@ -737,7 +737,7 @@ static int MqttSample_CmdUnsubscribe(struct MqttSampleContext *ctx)
     int i = 0;
 
     
-/*È¥µô×îºó»Ø³µ¼ü
+/*È¥ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½
  */
     for(i=strlen(buf); i>0; --i){
         if(buf[i-1] == 0x0a)
